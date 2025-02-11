@@ -1,93 +1,4 @@
-// "use client"
 
-// import { client } from "@/sanity/lib/client";
-// import { useEffect, useState } from "react";
-// interface PostProps {
-//     [key : string]: {
-//       name: string;
-//       slug: string;
-//       catagory: string;
-//       image: string;
-//       fuel: string;
-//       handle: string;
-//       capasity: string;
-//       price: string;
-//       secondprice: string;
-//     };
-//   }
-
-
-
-// const Admin = ({params}:{params : {slug : string}})=>{
-//     console.log(params);
-
-//     const [data, setData] = useState([]);
-//     const [data2, setData2] = useState([]);
-//     const [post, setPost] = useState<any>();
-//     const [data3, setdata3] = useState();
-
-//     const query = `*[_type == "car"]{
-//       name,
-//       slug,
-//       catagory,
-//       image,
-//       fuel,
-//       handle,
-//       capasity,
-//       price,
-//       secondprice
-//     }`;
-
-//     const query2 = `*[_type == "cartwo"]{
-//       name,
-//       slug,
-//       catagory,
-//       image,
-//       fuel,
-//       handle,
-//       capasity,
-//       price,
-//       secondprice
-//     }`;
-
-//     const query3 = `*[_type == "car"  && slug.current == "${params.slug}" || _type == "cartwo"  && slug.current == "${params.slug}" || _type == "carct"  && slug.current == "${params.slug}" ]{
-//       name,
-//       slug,
-//       catagory,
-//       image,
-//       fuel,
-//       handle,
-//       capasity,
-//       price,
-//       secondprice
-//     }`;
-
-//     useEffect(() => {
-//       const fetchData = async () => {
-//         try {
-//           const sanitydata = await client.fetch(query);
-//           const sanitydata2 = await client.fetch(query2);
-//           const sanitydata3 = await client.fetch(query3);
-//           console.log(sanitydata3[0]); // یہ آپ کے ڈیٹا کی تصدیق کے لیے ہے
-
-//           setData(sanitydata);
-//           setData2(sanitydata2);
-//           setPost(sanitydata3[0]);
-//           setdata3(sanitydata.pop())
-//           console.log(data3);
-//           const data4 = sanitydata2.find((i : PostProps) => {i.name == "CR - V"})
-
-//         } catch (error) {
-//           console.error("Error fetching data:", error);
-//         }
-//       };
-
-//       fetchData();
-//     }, [params.slug]); // Re-fetch when slug changes
-
-// }
-
-// export default Admin
 "use client";
 import Image from "next/image"
 
@@ -232,7 +143,8 @@ const Admin = ({ params }: { params: { slug: string } }) => {
                                 <h6 className="text-[#90A3BF] text-[12px] font-semibold ml-6">MAIN MENU</h6>
                                 <div className="space-y-3 pt-5">
 
-                                    <div  tabIndex={0} autoFocus onFocus={()=>{setDashbord(true) , setInventory(false)} 
+                                    <div  tabIndex={0} autoFocus onFocus={()=>{setDashbord(true) 
+                                      setInventory(false)} 
                                     }
                                         className="flex items-center gap-3 px-4 py-4 focus:outline-none rounded-lg group hover:bg-blue-200 cursor-pointer  hover:text-white focus:text-white text-[#90A3BF] focus:bg-blue-400 bg-white">
                                         <RiHome5Fill className="text-[32px]  " />
