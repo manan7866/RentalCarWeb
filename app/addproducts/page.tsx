@@ -19,7 +19,7 @@ interface CarData {
   // Import your Sanity client
 
 // Function to fetch and upload the image
-export const fetchAndUploadImage = async (imageUrl: string) => {
+ const fetchAndUploadImage = async (imageUrl: string) => {
   try {
     // 1. Fetch the image from the URL
     const imageResponse = await fetch(imageUrl);
@@ -52,7 +52,7 @@ export const fetchAndUploadImage = async (imageUrl: string) => {
 };
 
 // Function to fetch car data and push it to Sanity
-export const pushCarsToSanity = async () => {
+ const pushCarsToSanity = async () => {
   try {
     // API se car data fetch karna
     const response = await fetch('/api/cars');
