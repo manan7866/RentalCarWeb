@@ -72,7 +72,7 @@ export async function POST(req: NextRequest) {
 
 // GET Request to fetch all cars
 export async function GET(req: NextRequest) {
-    req
+    console.log(req)
   return new NextResponse(JSON.stringify(posts), { status: 200 });
 }
 
