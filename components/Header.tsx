@@ -15,7 +15,7 @@ import { RxCross1 } from "react-icons/rx";
 import home from "@/public/Dashboard/home.png"
 import car from "@/public/Dashboard/car.png"
 import chart from "@/public/Dashboard/chart.png"
-import wallet from "@/public/Dashboard/wallet.png"
+import wallet from "@/public/Dashboard/wallet.svg"
 import message from "@/public/Dashboard/message.png"
 import calendar from "@/public/Dashboard/calendar.png"
 
@@ -148,7 +148,7 @@ export default function Header (){
     setmenu(!menu)
   }
   const mp = usePathname();
-  const linkHref = mp !== "/catagory" ? "/catagory" : window.location.pathname;
+  const linkHref = mp !== "/category" ? "/category" : window.location.pathname;
  return(
   <div>
    <div className="flex justify-between px-14  h-[124px] xs:px-4 xs:py-4 xs:h-[60px] sm:h-[70px] sm:px-6 sm:py-6 md:h-[90px] md:px-6 md:py-6 xl:h-[110px] w-full items-center"> 

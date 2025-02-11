@@ -74,7 +74,7 @@ const Detail = ({ params }: { params: { slug: string } }) => {
   setTrigr(!trigr)
  }
  const mp = usePathname();
- const linkHref = mp !== "/catagory" ? "/catagory" : window.location.pathname;
+ const linkHref = mp !== "/category" ? "/category" : window.location.pathname;
   const query = `*[_type == "cars" && carvalue == "Popular Car"]{
     name,
     slug,
