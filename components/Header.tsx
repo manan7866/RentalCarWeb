@@ -63,20 +63,27 @@ export default function Header (){
     const [loading, setLoading] = useState(false);
     
   // Function to fetch suggestions from Sanity
-  const fetchSuggestions = async (query: string) => {
-    setLoading(true);
-    if (query.trim().length > 0) {
-      const queryStr = `*[_type == "cars" && name match $query] {
+          const queryStr = `*[_type == "cars" && name match $query] {
         _id,
         slug,
         name,
         image,
         catagory
       }`;
+    
+  // Function to fetch suggestions from Sanity
+  const fetchSuggestions = async (query: string | undefined) => {
+    setLoading(true);
+
+    
+    if (query && query.trim().length > 0) {
 
       try {
-        const results = await client.fetch(queryStr, { query: `${query}*` });  // Wildcard query for fuzzy matching
+        const params: Record<string, string> = { query: `${query}*` };
+       
+        const results = await client.fetch(queryStr,params );  // Wildcard query for fuzzy matching
         setSuggestions(results);
+        
       } catch (error) {
         console.error("Error fetching suggestions:", error);
         setSuggestions([]);
@@ -85,8 +92,10 @@ export default function Header (){
       setSuggestions([]);
     }
     setLoading(false);
-  };
+      
+  
 
+  };
   // Effect to fetch suggestions when search query changes
   useEffect(() => {
     const debounceTimeout = setTimeout(() => {
