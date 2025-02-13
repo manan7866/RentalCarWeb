@@ -92,6 +92,7 @@ export default function Header (){
         const results = await client.fetch(queryStr,params );  // Wildcard query for fuzzy matching
         setSuggestions(results);
         
+        
       } catch (error) {
         console.error("Error fetching suggestions:", error);
         setSuggestions([]);
@@ -100,6 +101,9 @@ export default function Header (){
       setSuggestions([]);
     }
     setLoading(false);
+      
+  
+
       
   
 
