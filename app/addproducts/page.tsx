@@ -7,7 +7,7 @@ import {client} from "@/sanityClient"
 interface CarData {
   id: number;
   name: string;
-  catagory: string;
+  category: string;
   fuel: string;
   handle: string;
   capasity: string;
@@ -19,7 +19,7 @@ interface CarData {
   // Import your Sanity client
 
 // Function to fetch and upload the image
-export const fetchAndUploadImage = async (imageUrl: string) => {
+ const fetchAndUploadImage = async (imageUrl: string) => {
   try {
     // 1. Fetch the image from the URL
     const imageResponse = await fetch(imageUrl);
@@ -52,7 +52,7 @@ export const fetchAndUploadImage = async (imageUrl: string) => {
 };
 
 // Function to fetch car data and push it to Sanity
-export const pushCarsToSanity = async () => {
+ const pushCarsToSanity = async () => {
   try {
     // API se car data fetch karna
     const response = await fetch('/api/cars');
@@ -86,7 +86,7 @@ export const pushCarsToSanity = async () => {
         name: car.name,
         price: car.price,
         secondprice: car.secondprice || '',  // Optional field
-        catagory: car.catagory,
+        category: car.category,
         image: {
           _type: 'image',
           asset: {
@@ -119,7 +119,7 @@ const CarsPage = () => {
   const [newCar, setNewCar] = useState<CarData>({
     id: 0,
     name: '',
-    catagory: '',
+    category: '',
     fuel: '',
     handle: '',
     capasity: '',
@@ -152,7 +152,7 @@ const CarsPage = () => {
 
     const formData = new FormData();
     formData.append('name', newCar.name);
-    formData.append('catagory', newCar.catagory);
+    formData.append('category', newCar.category);
     formData.append('fuel', newCar.fuel);
     formData.append('handle', newCar.handle);
     formData.append('capasity', newCar.capasity);
@@ -180,7 +180,7 @@ const CarsPage = () => {
         setNewCar({
           id: 0,
           name: '',
-          catagory: '',
+          category: '',
           fuel: '',
           handle: '',
           capasity: '',
@@ -245,7 +245,7 @@ const CarsPage = () => {
     const formData = new FormData();
     formData.append('id', newCar.id.toString());
     formData.append('name', newCar.name);
-    formData.append('catagory', newCar.catagory);
+    formData.append('category', newCar.category);
     formData.append('fuel', newCar.fuel);
     formData.append('handle', newCar.handle);
     formData.append('capasity', newCar.capasity);
@@ -273,7 +273,7 @@ const CarsPage = () => {
         setNewCar({
           id: 0,
           name: '',
-          catagory: '',
+          category: '',
           fuel: '',
           handle: '',
           capasity: '',
@@ -311,8 +311,8 @@ const CarsPage = () => {
         <input
         className='w-full h-14 px-5 shadow-lg outline-none bg-slate-200 rounded-lg'
           type="text"
-          value={newCar.catagory}
-          onChange={(e) => setNewCar({ ...newCar, catagory: e.target.value })}
+          value={newCar.category}
+          onChange={(e) => setNewCar({ ...newCar, category: e.target.value })}
           placeholder="Category"
           required
         />
@@ -399,7 +399,7 @@ const CarsPage = () => {
         ) : (
           cars.map((car) => (
             <div key={car.id} className=' rounded-lg py-2 my-6 bg-[#F6F7F9]' >
-             <Products name={car.name} catagory={car.catagory} image={String(car.image)} price={car.price} fuel={car.fuel }  capasity={car.capasity}  />
+             <Products name={car.name} category={car.category} image={String(car.image)} price={car.price} fuel={car.fuel }  capasity={car.capasity}  />
              <div className='flex justify-end gap-4 px-6'>
              <button className='bg-green-400 rounded-lg py-3 px-6 my-2' onClick={() => handleEdit(car)}>Edit</button>
              <button className='bg-red-500 rounded-lg py-3 px-6 my-2' onClick={() => handleDelete(car.id)}>Delete</button>

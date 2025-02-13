@@ -14,7 +14,7 @@ import Link from "next/link";
 
 interface CarProps {
   carname: string;
-  carcatagory: string;
+  carcategory: string;
   carpic: string;
   carfuel: string;
   cardrive: string;
@@ -31,7 +31,7 @@ interface CarProps {
 
 export default function Cartagtwo({
   carname,
-  carcatagory,
+  carcategory,
   carpic,
   carfuel,
   cardrive,
@@ -61,7 +61,7 @@ export default function Cartagtwo({
         
         </div>
       </div>
-      <p className="text-slate-300">{carcatagory}</p>
+      <p className="text-slate-300">{carcategory}</p>
       <div className="lg:flex  lg:justify-center lg:gap-20  sm:flex xs:items-center sm:items-center xs:flex md:flex xs:justify-between md:justify-center md:gap-20">
       <Link href={link2 || ""} legacyBehavior>
       <div className="h-[180px] md:h-[40%] xs:h-[40%] sm:h-[40%] lg:h-[40%] flex 2xl:mr-20 items-center">

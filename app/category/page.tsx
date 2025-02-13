@@ -19,7 +19,7 @@ import { CartContext } from '@/context/CartContext';
 interface PostProps {
   name: string;
   slug: { current: string };
-  catagory: string;
+  category: string;
   image: string;
   fuel: string;
   handle: string;
@@ -28,7 +28,7 @@ interface PostProps {
   secondprice: string;
 }
 
-export default function Page2 (){
+export default function Category (){
   // const [value, setValue] = useState(70);
   const [data, setData] = useState<PostProps[] >([]);
   const [data2, setData2] = useState<PostProps[] >([])
@@ -68,8 +68,8 @@ export default function Page2 (){
       
 
 if (ischeked ) {
-  const query2 = `*[ _type == "cars" && catagory == "Sport" ]{
-    name, slug, catagory, image, fuel, handle, capasity, price, secondprice
+  const query2 = `*[ _type == "cars" && category == "Sport" ]{
+    name, slug, category, image, fuel, handle, capasity, price, secondprice
   }`;
 
   if (!twop && !fourp && !sixp && value === 70) {
@@ -104,10 +104,10 @@ if (ischeked ) {
  
  
  if (issuv){
-  const query2 = `*[ _type == "cars" && catagory == "SUV" ]{
+  const query2 = `*[ _type == "cars" && category == "SUV" ]{
     name,
     slug,
-    catagory,
+    category,
     image,
     fuel,
     handle,
@@ -158,10 +158,10 @@ if (ischeked ) {
   
   }
   if (issudan){
-    const query2 = `*[ _type == "cars" && catagory == "Sedan"]{
+    const query2 = `*[ _type == "cars" && category == "Sedan"]{
       name,
       slug,
-      catagory,
+      category,
       image,
       fuel,
       handle,
@@ -191,10 +191,10 @@ if (ischeked ) {
     
     }
     if (ishb){
-      const query2 = `*[_type == "cars" && catagory == "Hatchback"]{
+      const query2 = `*[_type == "cars" && category == "Hatchback"]{
         name,
         slug,
-        catagory,
+        category,
         image,
         fuel,
         handle,
@@ -227,7 +227,7 @@ if (ischeked ) {
         const query2 = `*[_type == "cars" && capasity == "2"]{
           name,
           slug,
-          catagory,
+          category,
           image,
           fuel,
           handle,
@@ -258,7 +258,7 @@ if (ischeked ) {
           const query2 = `*[_type == "cars" && capasity == "4" ]{
             name,
             slug,
-            catagory,
+            category,
             image,
             fuel,
             handle,
@@ -289,7 +289,7 @@ if (ischeked ) {
             const query2 = `*[_type == "cars" && capasity == "6"]{
               name,
               slug,
-              catagory,
+              category,
               image,
               fuel,
               handle,
@@ -320,7 +320,7 @@ if (ischeked ) {
               const query2 = `*[_type == "cars" && price == $value]{
                 name,
                 slug,
-                catagory,
+                category,
                 image,
                 fuel,
                 handle,
@@ -454,7 +454,7 @@ fetchdata()
 <div>
   {carArry.map((c, index) => {
     // Category name (first car in the array)
-    const categoryName = c[0]?.catagory || 'No Category';
+    const categoryName = c[0]?.category || 'No Category';
 
     // Capacity labels logic (Unique values using Set)
     const capacityLabels: Set<string> = new Set();
@@ -517,7 +517,7 @@ fetchdata()
                 link2={`/detail/${car.slug.current}`}
                 link={`/billing/${car.slug.current}`}
                 carname={car.name}
-                carcatagory={car.catagory}
+                carcategory={car.category}
                 carpic={car.image}
                 carfuel={car.fuel}
                 cardrive={car.handle}

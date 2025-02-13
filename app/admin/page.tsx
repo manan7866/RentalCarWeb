@@ -6,7 +6,7 @@
 //     [key : string]: {
 //       name: string;
 //       slug: string;
-//       catagory: string;
+//       category: string;
 //       image: string;
 //       fuel: string;
 //       handle: string;
@@ -29,7 +29,7 @@
 //     const query = `*[_type == "car"]{
 //       name,
 //       slug,
-//       catagory,
+//       category,
 //       image,
 //       fuel,
 //       handle,
@@ -41,7 +41,7 @@
 //     const query2 = `*[_type == "cartwo"]{
 //       name,
 //       slug,
-//       catagory,
+//       category,
 //       image,
 //       fuel,
 //       handle,
@@ -53,7 +53,7 @@
 //     const query3 = `*[_type == "car"  && slug.current == "${params.slug}" || _type == "cartwo"  && slug.current == "${params.slug}" || _type == "carct"  && slug.current == "${params.slug}" ]{
 //       name,
 //       slug,
-//       catagory,
+//       category,
 //       image,
 //       fuel,
 //       handle,
@@ -125,7 +125,7 @@ import moon from "@/public/Dashboard/moon.png"
 interface PostProps {
     name: string;
     slug: { current: string };
-    catagory: string;
+    category: string;
     image: string;
     fuel: string;
     handle: string;
@@ -148,7 +148,7 @@ const Admin = ({ params }: { params: { slug: string } }) => {
     const query = `*[_type == "carupdates" "]{
     name,
     slug,
-    catagory,
+    category,
     image,
     fuel,
     handle,
@@ -161,7 +161,7 @@ const Admin = ({ params }: { params: { slug: string } }) => {
     const query2 = `*[_type == "cars"]{
     name,
     slug,
-    catagory,
+    category,
     image,
     fuel,
     handle,
@@ -173,7 +173,7 @@ const Admin = ({ params }: { params: { slug: string } }) => {
     const query3 = `*[_type == "cars" && slug.current == "${params.slug}"]{
     name,
     slug,
-    catagory,
+    category,
     image,
     fuel,
     handle,
@@ -219,7 +219,7 @@ const Admin = ({ params }: { params: { slug: string } }) => {
     }, [params.slug]);
 
     return (
-        <>
+        
 
             <main className="w-full h-auto bg-[#F6F7F9]">
                 <div className="flex xl:w-full">
@@ -232,7 +232,8 @@ const Admin = ({ params }: { params: { slug: string } }) => {
                                 <h6 className="text-[#90A3BF] text-[12px] font-semibold ml-6">MAIN MENU</h6>
                                 <div className="space-y-3 pt-5">
 
-                                    <div  tabIndex={0} autoFocus onFocus={()=>{setDashbord(true) , setInventory(false)} 
+                                    <div  tabIndex={0} autoFocus onFocus={()=>{setDashbord(true) 
+                                     setInventory(false)} 
                                     }
                                         className="flex items-center gap-3 px-4 py-4 focus:outline-none rounded-lg group hover:bg-blue-200 cursor-pointer  hover:text-white focus:text-white text-[#90A3BF] focus:bg-blue-400 bg-white">
                                         <RiHome5Fill className="text-[32px]  " />
@@ -397,7 +398,7 @@ const Admin = ({ params }: { params: { slug: string } }) => {
             <div className="sm:w-full xs:w-full">
                 <h1 className="font-bold bg-white xs:text-[16px] text-[24px] ">{post?.name}</h1>
                 <div className="flex justify-between sm:gap-2 xs:gap-1 sm:w-full  gap-[185px]">
-                    <h6 className="text-[14px] xs:text-[10px] text-[#3D5278] font-medium">{post?.catagory}</h6>
+                    <h6 className="text-[14px] xs:text-[10px] text-[#3D5278] font-medium">{post?.category}</h6>
                     <h6 className="m2xl:hidden text-[14px] text-[#3D5278] font-medium">#9761</h6>
                 </div>
             </div>
@@ -601,7 +602,7 @@ const Admin = ({ params }: { params: { slug: string } }) => {
                                         <p className="text-slate-400 xs:text-[8px] text-lg sm:text-[9px] md:text-sm font-normal">{date -= 1} July</p>
                                     </div>
                                     <div className="flex w-full text-xl md:text-lg sm:text-[10px]font-bold justify-between">
-                                        <p className="text-slate-400 xs:text-[9px] text-lg sm:text-[9px] md:text-sm font-normal">{c.catagory === "sport" ? c.catagory + " car" : c.catagory}</p>
+                                        <p className="text-slate-400 xs:text-[9px] text-lg sm:text-[9px] md:text-sm font-normal">{c.category === "sport" ? c.category + " car" : c.category}</p>
                                         <p className="sm:text-[9px] xs:text-[8px]">{"$" + c.price + ".00"}</p>
                                     </div>
                                 </div>
@@ -621,7 +622,7 @@ const Admin = ({ params }: { params: { slug: string } }) => {
                     </div>
                 </div>
             </main>
-        </>
+        
     );
 };
 

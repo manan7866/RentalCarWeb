@@ -41,7 +41,7 @@ const Cartpage = () => {
                                {car.fav ? (<IoHeart  className="text-3xl text-red-500" />) : 
                                (<IoHeartOutline  className="text-3xl text-slate-300" />)}
                             </div>
-                           <Products name={car.name} catagory={car.catagory} image={urlFor(car.image).url()} fuel={car.fuel} capasity={car.capasity} price={car.price} />
+                           <Products name={car.name} category={car.category} image={urlFor(car.image).url()} fuel={car.fuel} capasity={car.capasity} price={car.price} />
                            <Link href={`/billing/${car?.slug.current}`} legacyBehavior>
                            <a className="my-link-class" target="_blank" rel="noopener noreferrer">
                            <button className='bg-blue-500 py-4 my-3 text-xl rounded-lg w-full'>Rent now</button></a></Link>

@@ -16,7 +16,7 @@ import { useEffect ,useState } from "react";
 interface PostProps {
   name: string;
   slug: {current : string} 
-  catagory: string;
+  category: string;
   image: string;
   fuel: string;
   handle: string;
@@ -77,7 +77,7 @@ export default  function Home (){
   const query = `*[_type == "cars" && carvalue == "Popular Car" ]{
     name,
     slug,
-    catagory,
+    category,
     image,
     fuel,
     handle,
@@ -89,7 +89,7 @@ export default  function Home (){
   const query2 = `*[_type == "cars" && carvalue == "Recomendation Car" ]{
     name,
     slug,
-    catagory,
+    category,
     image,
     fuel,
     handle,
@@ -181,7 +181,7 @@ export default  function Home (){
                    
                     <div key={"any"}>
                       
-                  <Car isFav={isFav} onFavToggle={handleFavToggle}  link={`/billing/${c?.slug.current}`} link2={`/detail/${c?.slug.current}`} className="2xl:w-[320px]  xs:w-[260px]"  carname={c.name} carcatagory={c.catagory} carpic={c.image} carfuel={c.fuel} cardrive={c.handle}
+                  <Car isFav={isFav} onFavToggle={handleFavToggle}  link={`/billing/${c?.slug.current}`} link2={`/detail/${c?.slug.current}`} className="2xl:w-[320px]  xs:w-[260px]"  carname={c.name} carcategory={c.category} carpic={c.image} carfuel={c.fuel} cardrive={c.handle}
                    carcapasity={c.capasity} carprice={c.price} carptwo={c.secondprice} />
 
 </div>
@@ -214,7 +214,7 @@ export default  function Home (){
               return(
                 
                   
-                  <Cartwo isFav={isFav} onFavToggle={handleFavToggle} key={c.slug.current} link={`/billing/${c.slug.current}`} link2={`/detail/${c.slug.current}`}  carname={c.name} carcatagory={c.catagory} carpic={c.image} carfuel={c.fuel} cardrive={c.handle}
+                  <Cartwo isFav={isFav} onFavToggle={handleFavToggle} key={c.slug.current} link={`/billing/${c.slug.current}`} link2={`/detail/${c.slug.current}`}  carname={c.name} carcategory={c.category} carpic={c.image} carfuel={c.fuel} cardrive={c.handle}
                    carcapasity={c.capasity} carprice={c.price} carptwo={c.secondprice} />
 
                
@@ -224,7 +224,7 @@ export default  function Home (){
             </div>
             <div className="flex justify-between h-[200px] items-center">
               <div className="bg-[#E0E9F4] h-3 w-3"></div>
-              <a href="/catagory">
+              <a href="/category">
             <button className="w-[200px] h-[50px] text-xl xs:text-[14px] xs:w-[120px] sm:text-[16px] sm:w-[140px] bg-blue-500 rounded-md text-white mt-8">Show more Car</button></a>
             <p className="text-slate-300 text-xl">120Car</p>
             </div>

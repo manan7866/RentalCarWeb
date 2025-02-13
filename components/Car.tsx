@@ -17,7 +17,7 @@ import Link from "next/link";
 interface CarProps {
   
   carname: string;
-  carcatagory: string;
+  carcategory: string;
   carpic: string 
   carfuel: string;
   cardrive: string;
@@ -34,7 +34,7 @@ interface CarProps {
 export default  function Cartag({
   
   carname,
-  carcatagory,
+  carcategory,
   carpic,
   carfuel,
   cardrive,
@@ -69,7 +69,7 @@ export default  function Cartag({
         
         </div>
       </div>
-      <p className="text-slate-300">{carcatagory}</p>
+      <p className="text-slate-300">{carcategory}</p>
       <Link  href={link2 || ""} legacyBehavior>
       <div className="h-[180px] xl:w-[340px] m2xl:w-[360px] 2xl:w-[360px] lg:w-[310px] md:w-[260px] sm:w-[230px] xs:w-[230px] flex  items-center">
         <Image src={urlFor(carpic).url()} alt="Carpic" width={240} height={0} layout="intrinsic" className="pl-[5%]"/>

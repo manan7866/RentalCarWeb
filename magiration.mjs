@@ -95,7 +95,7 @@ function importData() {
                         name: product.name,
                         price: product.price,
                         seconprice: product.seconprice,
-                        catagory: product.catagory,
+                        category: product.category,
                         image: {
                             _type: 'image',
                             asset: {

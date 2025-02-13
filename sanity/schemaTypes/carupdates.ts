@@ -21,7 +21,7 @@ export const carupdates = defineType({
      
     },
     {
-      name: "catagory",
+      name: "category",
       title: "Category",
       type: "string",
       description: "Car category",

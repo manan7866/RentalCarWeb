@@ -4,7 +4,7 @@ interface inCartArryType {
   slug : {current : string},
   fav : boolean,  
   name: string,
-  catagory: string,
+  category: string,
   image: string,
   fuel: string,
   handle: string,
@@ -15,7 +15,7 @@ interface inCartArryType {
 interface rentCar {
   slug : {current : string},
   name : string,
-  catagory : string,
+  category : string,
   image : string,
   price : number,
   rentalDate : string
@@ -26,8 +26,8 @@ interface CartType {
   setFav : Dispatch<SetStateAction<boolean>>;
   name: string;
   setName: Dispatch<SetStateAction<string>>;
-  catagory: string;
-  setCatagory: Dispatch<SetStateAction<string>>;
+  category: string;
+  setcategory: Dispatch<SetStateAction<string>>;
   image: string;
   setImage: Dispatch<SetStateAction<string>>;
   fuel: string;
@@ -52,8 +52,8 @@ const defaultCart: CartType = {
   setFav : ()=>{},
   name: '',
   setName: () => {},
-  catagory: '',
-  setCatagory: () => {},
+  category: '',
+  setcategory: () => {},
   image: '',
   setImage: () => {},
   fuel: '',
@@ -79,7 +79,7 @@ export const CartContext = createContext<CartType>(defaultCart);
 export const CartProvider =({ children }: { children: React.ReactNode })  => {
   const [fav , setFav] = useState(false)
   const [name, setName] = useState('');
-  const [catagory, setCatagory] = useState('');
+  const [category, setcategory] = useState('');
   const [image, setImage] = useState('');
   const [fuel, setFuel] = useState('');
   const [handle, setHandle] = useState('');
@@ -95,8 +95,8 @@ export const CartProvider =({ children }: { children: React.ReactNode })  => {
     setFav,
     name,
     setName,
-    catagory,
-    setCatagory,
+    category,
+    setcategory,
     image,
     setImage,
     fuel,

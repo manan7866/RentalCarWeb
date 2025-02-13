@@ -47,7 +47,7 @@
 //         name: product.name,
 //         price: product.price,
 //         seconprice: product.secondprice,
-//         catagory: product.catagory,
+//         category: product.category,
 //         image: {
 //           _type: 'image',
 //           asset: {
@@ -122,7 +122,7 @@ async function importData() {
         name: product.name,
         price: product.price,
         seconprice: product.secondprice,
-        catagory: product.catagory,
+        category: product.category,
         image: {
           _type: 'image',
           asset: {

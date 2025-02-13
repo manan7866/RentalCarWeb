@@ -29,7 +29,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 interface PostProps {
     name: string;
     slug: { current: string };
-    catagory: string;
+    category: string;
     image: string;
     fuel: string;
     handle: string;
@@ -60,7 +60,7 @@ if (process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY === undefined) {
     const query3 = `*[_type == "cars"  && slug.current == "${params.slug}" ]{
         name,
         slug,
-        catagory,
+        category,
         image,
         fuel,
         handle,
@@ -103,7 +103,7 @@ if (process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY === undefined) {
           _type: "carupdate",
           slug: post?.slug.current,
           name: post?.name,
-          catagory: post?.catagory || "default",
+          category: post?.category || "default",
           capasity: post?.capasity || "default",
           price: Number(post?.price),
           secondprice: Number(post?.secondprice) || 0,

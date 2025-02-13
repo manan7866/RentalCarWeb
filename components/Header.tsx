@@ -39,11 +39,11 @@ import {
     UserButton
   } from '@clerk/nextjs'
  type car = {
-    _id : number,
+    _id : string,
     name : string,
     slug :{ current : string},
     image : string,
-    catagory : string,
+    category : string,
  }
 
 
@@ -55,28 +55,43 @@ import { client } from "@/sanityClient";
 
 import { urlFor } from "@/sanity/lib/image";
 
+
 export default function Header (){
     const [activeIndex, setActiveIndex] = useState(0);
     const { twop, setTwop, fourp, setFourp, sixp, setSixp ,ischeked , setischeked,issuv , setsuv, issudan , setsudan ,ishb , sethb, value , setValue  ,trigr, setTrigr }= useContext(FilterContext);
     const [searchQuery, setSearchQuery] = useState('');
     const [suggestions, setSuggestions] = useState<car[]>([]);
     const [loading, setLoading] = useState(false);
-    
-  // Function to fetch suggestions from Sanity
-  const fetchSuggestions = async (query: string) => {
-    setLoading(true);
-    if (query.trim().length > 0) {
-      const queryStr = `*[_type == "cars" && name match $query] {
+    const [linkHref ,setLinkHrerf] = useState("")
+    const mp = usePathname();
+          const queryStr = `*[_type == "cars" && name match $query] {
         _id,
         slug,
         name,
         image,
-        catagory
+        category
       }`;
+      useEffect(() => {
+        // Ensure this code runs only in the browser (client-side)
+        if (typeof window !== "undefined") {
+          setLinkHrerf(mp !== "/category" ? "/category" : window.location.pathname)
+           // Safe to use window here
+        }
+      }, [trigr]);
+    
+  // Function to fetch suggestions from Sanity
+  const fetchSuggestions = async (query: string | undefined) => {
+    setLoading(true);
+
+    
+    if (query && query.trim().length > 0) {
 
       try {
-        const results = await client.fetch(queryStr, { query: `${query}*` });  // Wildcard query for fuzzy matching
+        const params: Record<string, string> = { query: `${query}*` };
+       
+        const results = await client.fetch(queryStr,params );  // Wildcard query for fuzzy matching
         setSuggestions(results);
+        
       } catch (error) {
         console.error("Error fetching suggestions:", error);
         setSuggestions([]);
@@ -85,8 +100,11 @@ export default function Header (){
       setSuggestions([]);
     }
     setLoading(false);
-  };
+      
+  
 
+  };
+ 
   // Effect to fetch suggestions when search query changes
   useEffect(() => {
     const debounceTimeout = setTimeout(() => {
@@ -147,8 +165,8 @@ export default function Header (){
   const handlemenu =()=>{
     setmenu(!menu)
   }
-  const mp = usePathname();
-  const linkHref = mp !== "/category" ? "/category" : window.location.pathname;
+  
+  // const linkHref = mp !== "/category" ? "/category" : window.location.pathname;
  return(
   <div>
    <div className="flex justify-between px-14  h-[124px] xs:px-4 xs:py-4 xs:h-[60px] sm:h-[70px] sm:px-6 sm:py-6 md:h-[90px] md:px-6 md:py-6 xl:h-[110px] w-full items-center"> 
@@ -168,7 +186,7 @@ export default function Header (){
         <Image src={filter} height={28} width={28} alt="filter"></Image>
         
     </div>
-    <div className="absolute w-[510px] rounded-xl">
+    <div className="absolute w-[510px] rounded-xl z-50">
     {searchQuery && suggestions.length > 0 && (
   <ul className="suggestions-list ">
     {loading ? (
@@ -189,7 +207,7 @@ export default function Header (){
             height={0}
           />
           <span className="suggestions-text cursor-pointer">
-            {suggestion.name} - {suggestion.catagory}
+            {suggestion.name} - {suggestion.category}
           </span>
         </li>
       ))

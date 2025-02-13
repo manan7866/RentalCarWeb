@@ -23,7 +23,7 @@
 // interface productDataType {
 //     name : string,
 //     slug : string ,
-//     catagory : string,
+//     category : string,
 //     image : string,
 //     fuel : string,
 //     handle : string,
@@ -38,7 +38,7 @@
 //             _type: 'cartwo', // Schema type
 //             name: productData.name,
 //             slug: productData.slug,
-//             catagory: productData.catagory,
+//             category: productData.category,
 //             image: productData.image,
 //             fuel: productData.fuel,
 //             handle: productData.handle,
@@ -58,7 +58,7 @@
 //     .max(20, "Product name must be at most 20 characters long"),
 //     slug : z.string().min(4, "Product name must be at least 4 characters long")
 //     .max(15, "Product name must be at most 15 characters long"),
-//     catagory : z.string().min(2, "Product name must be at least 2 characters long")
+//     category : z.string().min(2, "Product name must be at least 2 characters long")
 //     .max(10, "Product name must be at most 10 characters long"),
 //     fuel : z.string().min(1, "Product name must be at least 1 characters long")
 //     .max(3, "Product name must be at most 3 characters long"),
@@ -78,7 +78,7 @@
 //         defaultValues: {
 //             name: "",
 //             slug: "",
-//             catagory: "",
+//             category: "",
 //             image: "",
 //             fuel: "",
 //             handle: "",
@@ -90,7 +90,7 @@
 //     function onSubmit(data: z.infer<typeof formSchema>) {
      
 //         console.log(data)
-//         const productData = {name: data.name, slug : data.slug , catagory : data.catagory, image : data.image ,  fuel: data.fuel, handle: data.handle, capasity: data.capasity,  price: Number(data.price), secondprice: data.secondprice}
+//         const productData = {name: data.name, slug : data.slug , category : data.category, image : data.image ,  fuel: data.fuel, handle: data.handle, capasity: data.capasity,  price: Number(data.price), secondprice: data.secondprice}
 //      addproduct(productData)
 //       }
 
@@ -128,7 +128,7 @@
 //       />
 //       <FormField
 //         control={form.control}
-//         name="catagory"
+//         name="category"
 //         render={({ field }) => (
 //           <FormItem>
 //             <FormLabel>Category</FormLabel>
@@ -246,7 +246,7 @@ import { urlFor } from '@/sanity/lib/image';
 interface productData {
   name: string;
   slug: string;
-  catagory: string;
+  category: string;
   image?: string;  // image can be string or undefined
   fuel: string;
   handle: string;
@@ -261,7 +261,7 @@ const addProduct = async (productData: productData) => {
       _type: 'cartwo',
       name: productData.name,
       slug: productData.slug,
-      catagory: productData.catagory,
+      category: productData.category,
       image: productData.image,  // Image URL is passed here
       fuel: productData.fuel,
       handle: productData.handle,
@@ -282,7 +282,7 @@ const formSchema = z.object({
     .max(20, "Product name must be at most 20 characters long"),
   slug: z.string().min(4, "Slug must be at least 4 characters long")
     .max(15, "Slug must be at most 15 characters long"),
-  catagory: z.string().min(2, "Category must be at least 2 characters long")
+  category: z.string().min(2, "Category must be at least 2 characters long")
     .max(10, "Category must be at most 10 characters long"),
   fuel: z.string().min(1, "Fuel must be at least 1 character long")
     .max(3, "Fuel must be at most 3 characters long"),
@@ -303,7 +303,7 @@ const ProductForm = () => {
     defaultValues: {
       name: "",
       slug: "",
-      catagory: "",
+      category: "",
       image: undefined,
       fuel: "",
       handle: "",
@@ -317,7 +317,7 @@ const ProductForm = () => {
     const productData = {
       name: data.name,
       slug: data.slug,
-      catagory: data.catagory,
+      category: data.category,
       image: imageUrl,  // Set the generated image URL here
       fuel: data.fuel,
       handle: data.handle,
@@ -358,8 +358,8 @@ const ProductForm = () => {
         <input {...form.register("slug")} />
       </div>
       <div>
-        <label>Catagory</label>
-        <input {...form.register("catagory")} />
+        <label>category</label>
+        <input {...form.register("category")} />
       </div>
       <div>
         <label>Image</label>

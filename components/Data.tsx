@@ -138,7 +138,7 @@
 // interface CarData {
 //   id: number;
 //   name: string;
-//   catagory: string;
+//   category: string;
 //   fuel: string;
 //   handle: string;
 //   capasity: string;
@@ -187,7 +187,7 @@
 //           <div key={car.id} style={{ border: '1px solid #ddd', marginBottom: '20px', padding: '10px' }}>
 //             <img src={car.image} alt={car.name} width={100} />
 //             <h2>{car.name}</h2>
-//             <p>Category: {car.catagory}</p>
+//             <p>Category: {car.category}</p>
 //             <p>Fuel: {car.fuel}</p>
 //             <p>Price: {car.price}</p>
 //             <p>Capacity: {car.capasity}</p>
@@ -225,7 +225,7 @@
 // interface CarData {
 //   id: number;
 //   name: string;
-//   catagory: string;
+//   category: string;
 //   fuel: string;
 //   handle: string;
 //   capasity: string;
@@ -243,7 +243,7 @@
 //   const [formData, setFormData] = useState<CarData>({
 //     id: car ? car.id : 0, // Default value for id to 0 if no car passed
 //     name: car ? car.name : '',
-//     catagory: car ? car.catagory : '',
+//     category: car ? car.category : '',
 //     fuel: car ? car.fuel : '',
 //     handle: car ? car.handle : '',
 //     capasity: car ? car.capasity : '',
@@ -260,7 +260,7 @@
 //       setFormData({
 //         id: car.id,
 //         name: car.name,
-//         catagory: car.catagory,
+//         category: car.category,
 //         fuel: car.fuel,
 //         handle: car.handle,
 //         capasity: car.capasity,
@@ -347,8 +347,8 @@
 //         <label>Category:</label>
 //         <input
 //           type="text"
-//           name="catagory"
-//           value={formData.catagory}
+//           name="category"
+//           value={formData.category}
 //           onChange={handleChange}
 //           required
 //         />
@@ -424,7 +424,7 @@ import React, { useState } from 'react';
 
 interface CarData {
   name: string;
-  catagory: string;
+  category: string;
   fuel: string;
   handle: string;
   capasity: string;
@@ -437,7 +437,7 @@ interface CarData {
 const Page = () => {
   const [carData, setCarData] = useState<CarData>({
     name: '',
-    catagory: '',
+    category: '',
     fuel: '',
     handle: '',
     capasity: '',
@@ -457,7 +457,7 @@ const Page = () => {
     try {
       const formData = new FormData();
       formData.append("name", carData.name);
-      formData.append("catagory", carData.catagory);
+      formData.append("category", carData.category);
       formData.append("fuel", carData.fuel);
       formData.append("handle", carData.handle);
       formData.append("capasity", carData.capasity);
@@ -494,8 +494,8 @@ const Page = () => {
         />
         <input
           type="text"
-          value={carData.catagory}
-          onChange={(e) => setCarData({ ...carData, catagory: e.target.value })}
+          value={carData.category}
+          onChange={(e) => setCarData({ ...carData, category: e.target.value })}
           placeholder="Category"
           required
         />

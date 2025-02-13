@@ -9,7 +9,7 @@ import { LuBadgeDollarSign } from "react-icons/lu";
 interface productType{
     id? : number,
     name : string,
-    catagory : string,
+    category : string,
     image : string ,
     fuel? : string,
     handle? : string,
@@ -20,11 +20,11 @@ interface productType{
 
 }
 
-const Products  = ({name , catagory , image , fuel, capasity ,price} : productType) => {
+const Products  = ({name , category , image , fuel, capasity ,price} : productType) => {
   return (
     <div className='w-full  py-4 px-8'>
         <p className='text-xl py-2'>{name}</p>
-        <p className='text-lg text-slate-400'>{catagory}</p>
+        <p className='text-lg text-slate-400'>{category}</p>
         <div className='py-2 w-full flex justify-center items-center'>
             <Image src={image} width={200} height={0} alt='Car image' className='w-[60%] my-8' />
         </div>

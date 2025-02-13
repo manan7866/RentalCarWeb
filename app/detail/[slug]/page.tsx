@@ -38,7 +38,7 @@ interface PostProps {
   _id? : string,
   name: string;
   slug: { current: string };
-  catagory: string;
+  category: string;
   image: string;
   fuel: string;
   handle: string;
@@ -62,7 +62,9 @@ const Detail = ({ params }: { params: { slug: string } }) => {
   const [User, setUser] = useState("");
   const { user } = useUser();
   const [addReview ,setReview] = useState(false)
-  // const [keys , setkey] = useState("")
+  
+  const mp = usePathname();
+  const [linkHref ,setLinkHrerf] = useState("")
   useEffect(() => {
     const storedFavCars = localStorage.getItem("favCars");
     if (storedFavCars) {
@@ -73,12 +75,19 @@ const Detail = ({ params }: { params: { slug: string } }) => {
  const handletrigr = ()=>{
   setTrigr(!trigr)
  }
- const mp = usePathname();
- const linkHref = mp !== "/category" ? "/category" : window.location.pathname;
+ useEffect(() => {
+  // Ensure this code runs only in the browser (client-side)
+  if (typeof window !== "undefined") {
+    setLinkHrerf(mp !== "/category" ? "/category" : window.location.pathname)
+     // Safe to use window here
+  }
+}, [trigr]);
+ 
+//  const linkHref = mp !== "/category" ? "/category" : window.location.pathname;
   const query = `*[_type == "cars" && carvalue == "Popular Car"]{
     name,
     slug,
-    catagory,
+    category,
     image,
     fuel,
     handle,
@@ -90,7 +99,7 @@ const Detail = ({ params }: { params: { slug: string } }) => {
   const query2 = `*[_type == "cars" && carvalue == "Recomendation Car"]{
     name,
     slug,
-    catagory,
+    category,
     image,
     fuel,
     handle,
@@ -103,7 +112,7 @@ const Detail = ({ params }: { params: { slug: string } }) => {
     _id,
     name,
     slug,
-    catagory,
+    category,
     image,
     fuel,
     handle,
@@ -447,7 +456,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                     </div>
                     <div className="grid grid-cols-4 grid-rows-2 gap-x-[5%] text-[28px] text-slate-300 text-end">
                         <p className="text-start">Type Car</p>
-                        <p className="text-slate-400 ">{post?.catagory}</p>
+                        <p className="text-slate-400 ">{post?.category}</p>
                         <p>Capacity</p>
                         <p className="text-slate-400 text-end">{sl}Person</p>
                         <p className="text-start">Steering</p>
@@ -520,7 +529,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                     </div>
                     <div className="grid grid-cols-4 grid-rows-2 gap-x-[5%] mt-6 md:text-[22px] sm:text-[16px] xs:text-[12px] text-[28px] text-slate-300 text-end">
                         <p className="text-start">Type Car</p>
-                        <p className="text-slate-400 ">{post?.catagory}</p>
+                        <p className="text-slate-400 ">{post?.category}</p>
                         <p>Capacity</p>
                         <p className="text-slate-400 text-end">{sl} Person</p>
                         <p className="text-start">Steering</p>
@@ -659,7 +668,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                      };
               return(
                 
-                  <Car isFav={isFav} onFavToggle={handleFavToggle} link2={`/detail/${c.slug.current}`} key={c.slug.current} link={`/billing/${c.slug.current}`} className="2xl:w-[360px] m2xl:w-[360px] "  carname={c.name} carcatagory={c.catagory} carpic={c.image} carfuel={c.fuel} cardrive={c.handle}
+                  <Car isFav={isFav} onFavToggle={handleFavToggle} link2={`/detail/${c.slug.current}`} key={c.slug.current} link={`/billing/${c.slug.current}`} className="2xl:w-[360px] m2xl:w-[360px] "  carname={c.name} carcategory={c.category} carpic={c.image} carfuel={c.fuel} cardrive={c.handle}
                    carcapasity={c.capasity} carprice={c.price} carptwo={c.secondprice} />
 
                
@@ -692,7 +701,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                        };
               return(
                 
-                  <Car isFav={isFav} onFavToggle={handleFavToggle} link2={`/detail/${c.slug.current}`} key={c.slug.current} link={`/billing/${c.slug.current}`} className="2xl:w-[360px] m2xl:w-[360px]"   carname={c.name} carcatagory={c.catagory} carpic={c.image} carfuel={c.fuel} cardrive={c.handle}
+                  <Car isFav={isFav} onFavToggle={handleFavToggle} link2={`/detail/${c.slug.current}`} key={c.slug.current} link={`/billing/${c.slug.current}`} className="2xl:w-[360px] m2xl:w-[360px]"   carname={c.name} carcategory={c.category} carpic={c.image} carfuel={c.fuel} cardrive={c.handle}
                    carcapasity={c.capasity} carprice={c.price} carptwo={c.secondprice} />
 
                

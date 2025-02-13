@@ -6,18 +6,18 @@
 
 // // Sample cars data to simulate database
 // const posts = [
-//   { id: 1, name: 'Keemigsegg', catagory: 'Sport', image: '/images/car.png', fuel: '90', handle: 'Manual', capasity: '2', price: 99, secondprice: '100', carvalue: "Popular Car" },
-//   { id: 2, name: 'Nissan GT-R', catagory: 'Sport', image: '/images/car2.png', fuel: '80', handle: 'Automatic', capasity: '4', price: 80, secondprice: '100', carvalue: "Popular Car" },
-//   { id: 3, name: 'Rolls - Royce' , catagory : 'Sedan',image : '/images/car3.png' , fuel : '70',handle : 'Manual' , capasity : '4' ,price: 96 , secondprice : '' ,carvalue : "popular Car" },
-//   { id: 4, name: 'Nissan GT - R' , catagory : 'sport',image : '/images/car4.png' , fuel : '80',handle : 'Manual' , capasity : '2' ,price: 80 , secondprice : '100' ,carvalue : "popular Car" },
-//   { id: 5, name: 'All New Rush' , catagory : 'SUV',image : '/images/car5.png' , fuel : '70',handle : 'Manual' , capasity : '6' ,price: 72 , secondprice : '100' ,carvalue : "Recomendation Car" },
-//   { id: 6, name: 'CR-V' , catagory : 'SUV',image : '/images/car6.png' , fuel : '80',handle : 'Manual' , capasity : '6' ,price: 80 , secondprice : '' ,carvalue : "Recomendation Car" },
-//   { id: 7, name: 'All New Terios' , catagory : 'SUV',image : '/images/car7.png' , fuel : '90',handle : 'Manual' , capasity : '6' ,price: 74 , secondprice : '' ,carvalue : "Recomendation Car" },
-//   { id: 8, name: 'CR-V' , catagory : 'SUV',image : '/images/car8.png' , fuel : '80',handle : 'Manual' , capasity : '6' ,price: 80 , secondprice : '' ,carvalue : "Recomendation Car" },
-//   { id: 9, name: 'MG ZX Exclusice' , catagory : 'Hatchback',image : '/images/car9.png' , fuel : '70',handle : 'Manual' , capasity : '4' ,price: 76 , secondprice : '80' ,carvalue : "Recomendation Car" },
-//   {id: 10, name: 'New MG ZS' , catagory : 'SUV',image : '/images/car10.png' , fuel : '80',handle : 'Manual' , capasity : '6' ,price: 80 , secondprice : '' ,carvalue : "Recomendation Car" },
-//   { id: 11, name: 'MG ZX Excite' , catagory : 'Hatchback',image : '/images/car11.png' , fuel : '90',handle : 'Manual' , capasity : '4' ,price: 74 , secondprice : '' ,carvalue : "Recomendation Car" },
-//   {id: 12, name: 'New MG ZS' , catagory : 'SUV',image : '/images/car12.png' , fuel : '80',handle : 'Manual' , capasity : '6' ,price: 80 , secondprice : '' ,carvalue : "Recomendation Car" },
+//   { id: 1, name: 'Keemigsegg', category: 'Sport', image: '/images/car.png', fuel: '90', handle: 'Manual', capasity: '2', price: 99, secondprice: '100', carvalue: "Popular Car" },
+//   { id: 2, name: 'Nissan GT-R', category: 'Sport', image: '/images/car2.png', fuel: '80', handle: 'Automatic', capasity: '4', price: 80, secondprice: '100', carvalue: "Popular Car" },
+//   { id: 3, name: 'Rolls - Royce' , category : 'Sedan',image : '/images/car3.png' , fuel : '70',handle : 'Manual' , capasity : '4' ,price: 96 , secondprice : '' ,carvalue : "popular Car" },
+//   { id: 4, name: 'Nissan GT - R' , category : 'sport',image : '/images/car4.png' , fuel : '80',handle : 'Manual' , capasity : '2' ,price: 80 , secondprice : '100' ,carvalue : "popular Car" },
+//   { id: 5, name: 'All New Rush' , category : 'SUV',image : '/images/car5.png' , fuel : '70',handle : 'Manual' , capasity : '6' ,price: 72 , secondprice : '100' ,carvalue : "Recomendation Car" },
+//   { id: 6, name: 'CR-V' , category : 'SUV',image : '/images/car6.png' , fuel : '80',handle : 'Manual' , capasity : '6' ,price: 80 , secondprice : '' ,carvalue : "Recomendation Car" },
+//   { id: 7, name: 'All New Terios' , category : 'SUV',image : '/images/car7.png' , fuel : '90',handle : 'Manual' , capasity : '6' ,price: 74 , secondprice : '' ,carvalue : "Recomendation Car" },
+//   { id: 8, name: 'CR-V' , category : 'SUV',image : '/images/car8.png' , fuel : '80',handle : 'Manual' , capasity : '6' ,price: 80 , secondprice : '' ,carvalue : "Recomendation Car" },
+//   { id: 9, name: 'MG ZX Exclusice' , category : 'Hatchback',image : '/images/car9.png' , fuel : '70',handle : 'Manual' , capasity : '4' ,price: 76 , secondprice : '80' ,carvalue : "Recomendation Car" },
+//   {id: 10, name: 'New MG ZS' , category : 'SUV',image : '/images/car10.png' , fuel : '80',handle : 'Manual' , capasity : '6' ,price: 80 , secondprice : '' ,carvalue : "Recomendation Car" },
+//   { id: 11, name: 'MG ZX Excite' , category : 'Hatchback',image : '/images/car11.png' , fuel : '90',handle : 'Manual' , capasity : '4' ,price: 74 , secondprice : '' ,carvalue : "Recomendation Car" },
+//   {id: 12, name: 'New MG ZS' , category : 'SUV',image : '/images/car12.png' , fuel : '80',handle : 'Manual' , capasity : '6' ,price: 80 , secondprice : '' ,carvalue : "Recomendation Car" },
 // ];
 
 // export async function handler(req: NextRequest) {
@@ -40,7 +40,7 @@
 //   try {
 //     const data = await req.formData();
 //     const name = data.get('name') as string;
-//     const catagory = data.get('catagory') as string;
+//     const category = data.get('category') as string;
 //     const fuel = data.get('fuel') as string;
 //     const handle = data.get('handle') as string;
 //     const capasity = data.get('capasity') as string;
@@ -65,7 +65,7 @@
 //     const newCar = {
 //       id: posts.length + 1,
 //       name: name || '',
-//       catagory: catagory || '',
+//       category: category || '',
 //       fuel: fuel || '',
 //       handle: handle || '',
 //       capasity: capasity || '',
@@ -94,7 +94,7 @@
 //     const data = await req.formData();
 //     const id = parseInt(data.get('id') as string);
 //     const name = data.get('name') as string;
-//     const catagory = data.get('catagory') as string;
+//     const category = data.get('category') as string;
 //     const fuel = data.get('fuel') as string;
 //     const handle = data.get('handle') as string;
 //     const capasity = data.get('capasity') as string;
@@ -125,7 +125,7 @@
 //     }
 
 //     carToUpdate.name = name || carToUpdate.name;
-//     carToUpdate.catagory = catagory || carToUpdate.catagory;
+//     carToUpdate.category = category || carToUpdate.category;
 //     carToUpdate.fuel = fuel || carToUpdate.fuel;
 //     carToUpdate.handle = handle || carToUpdate.handle;
 //     carToUpdate.capasity = capasity || carToUpdate.capasity;
@@ -169,18 +169,18 @@
 
 // // Sample cars data to simulate database
 // let posts = [
-//   { id: 1, name: 'Keemigsegg', catagory: 'Sport', image: '/images/car.png', fuel: '90', handle: 'Manual', capasity: '2', price: 99, secondprice: '100', carvalue: "Popular Car" },
-//   { id: 2, name: 'Nissan GT-R', catagory: 'Sport', image: '/images/car2.png', fuel: '80', handle: 'Automatic', capasity: '4', price: 80, secondprice: '100', carvalue: "Popular Car" },
-//     { id: 3, name: 'Rolls - Royce' , catagory : 'Sedan',image : '/images/car3.png' , fuel : '70',handle : 'Manual' , capasity : '4' ,price: 96 , secondprice : '' ,carvalue : "popular Car" },
-//    { id: 4, name: 'Nissan GT - R' , catagory : 'sport',image : '/images/car4.png' , fuel : '80',handle : 'Manual' , capasity : '2' ,price: 80 , secondprice : '100' ,carvalue : "popular Car" },
-//    { id: 5, name: 'All New Rush' , catagory : 'SUV',image : '/images/car5.png' , fuel : '70',handle : 'Manual' , capasity : '6' ,price: 72 , secondprice : '100' ,carvalue : "Recomendation Car" },
-//    { id: 6, name: 'CR-V' , catagory : 'SUV',image : '/images/car6.png' , fuel : '80',handle : 'Manual' , capasity : '6' ,price: 80 , secondprice : '' ,carvalue : "Recomendation Car" },
-//    { id: 7, name: 'All New Terios' , catagory : 'SUV',image : '/images/car7.png' , fuel : '90',handle : 'Manual' , capasity : '6' ,price: 74 , secondprice : '' ,carvalue : "Recomendation Car" },
-//    { id: 8, name: 'CR-V' , catagory : 'SUV',image : '/images/car8.png' , fuel : '80',handle : 'Manual' , capasity : '6' ,price: 80 , secondprice : '' ,carvalue : "Recomendation Car" },
-//    { id: 9, name: 'MG ZX Exclusice' , catagory : 'Hatchback',image : '/images/car9.png' , fuel : '70',handle : 'Manual' , capasity : '4' ,price: 76 , secondprice : '80' ,carvalue : "Recomendation Car" },
-//    {id: 10, name: 'New MG ZS' , catagory : 'SUV',image : '/images/car10.png' , fuel : '80',handle : 'Manual' , capasity : '6' ,price: 80 , secondprice : '' ,carvalue : "Recomendation Car" },
-//    { id: 11, name: 'MG ZX Excite' , catagory : 'Hatchback',image : '/images/car11.png' , fuel : '90',handle : 'Manual' , capasity : '4' ,price: 74 , secondprice : '' ,carvalue : "Recomendation Car" },
-//    {id: 12, name: 'New MG ZS' , catagory : 'SUV',image : '/images/car12.png' , fuel : '80',handle : 'Manual' , capasity : '6' ,price: 80 , secondprice : '' ,carvalue : "Recomendation Car" },
+//   { id: 1, name: 'Keemigsegg', category: 'Sport', image: '/images/car.png', fuel: '90', handle: 'Manual', capasity: '2', price: 99, secondprice: '100', carvalue: "Popular Car" },
+//   { id: 2, name: 'Nissan GT-R', category: 'Sport', image: '/images/car2.png', fuel: '80', handle: 'Automatic', capasity: '4', price: 80, secondprice: '100', carvalue: "Popular Car" },
+//     { id: 3, name: 'Rolls - Royce' , category : 'Sedan',image : '/images/car3.png' , fuel : '70',handle : 'Manual' , capasity : '4' ,price: 96 , secondprice : '' ,carvalue : "popular Car" },
+//    { id: 4, name: 'Nissan GT - R' , category : 'sport',image : '/images/car4.png' , fuel : '80',handle : 'Manual' , capasity : '2' ,price: 80 , secondprice : '100' ,carvalue : "popular Car" },
+//    { id: 5, name: 'All New Rush' , category : 'SUV',image : '/images/car5.png' , fuel : '70',handle : 'Manual' , capasity : '6' ,price: 72 , secondprice : '100' ,carvalue : "Recomendation Car" },
+//    { id: 6, name: 'CR-V' , category : 'SUV',image : '/images/car6.png' , fuel : '80',handle : 'Manual' , capasity : '6' ,price: 80 , secondprice : '' ,carvalue : "Recomendation Car" },
+//    { id: 7, name: 'All New Terios' , category : 'SUV',image : '/images/car7.png' , fuel : '90',handle : 'Manual' , capasity : '6' ,price: 74 , secondprice : '' ,carvalue : "Recomendation Car" },
+//    { id: 8, name: 'CR-V' , category : 'SUV',image : '/images/car8.png' , fuel : '80',handle : 'Manual' , capasity : '6' ,price: 80 , secondprice : '' ,carvalue : "Recomendation Car" },
+//    { id: 9, name: 'MG ZX Exclusice' , category : 'Hatchback',image : '/images/car9.png' , fuel : '70',handle : 'Manual' , capasity : '4' ,price: 76 , secondprice : '80' ,carvalue : "Recomendation Car" },
+//    {id: 10, name: 'New MG ZS' , category : 'SUV',image : '/images/car10.png' , fuel : '80',handle : 'Manual' , capasity : '6' ,price: 80 , secondprice : '' ,carvalue : "Recomendation Car" },
+//    { id: 11, name: 'MG ZX Excite' , category : 'Hatchback',image : '/images/car11.png' , fuel : '90',handle : 'Manual' , capasity : '4' ,price: 74 , secondprice : '' ,carvalue : "Recomendation Car" },
+//    {id: 12, name: 'New MG ZS' , category : 'SUV',image : '/images/car12.png' , fuel : '80',handle : 'Manual' , capasity : '6' ,price: 80 , secondprice : '' ,carvalue : "Recomendation Car" },
 // ];
 
 // export const runtime = "edge";
@@ -191,7 +191,7 @@
 //     const data = await req.formData();  // Extract form data
 
 //     const name = data.get('name') as string;
-//     const catagory = data.get('catagory') as string;
+//     const category = data.get('category') as string;
 //     const fuel = data.get('fuel') as string;
 //     const handle = data.get('handle') as string;
 //     const capasity = data.get('capasity') as string;
@@ -217,7 +217,7 @@
 //     const newCar = {
 //       id: posts.length + 1,
 //       name: name || '',
-//       catagory: catagory || '',
+//       category: category || '',
 //       fuel: fuel || '',
 //       handle: handle || '',
 //       capasity: capasity || '',
@@ -248,7 +248,7 @@
     
 //     const id = parseInt(data.get('id') as string);
 //     const name = data.get('name') as string;
-//     const catagory = data.get('catagory') as string;
+//     const category = data.get('category') as string;
 //     const fuel = data.get('fuel') as string;
 //     const handle = data.get('handle') as string;
 //     const capasity = data.get('capasity') as string;
@@ -283,7 +283,7 @@
 
 //     // Update car data
 //     carToUpdate.name = name || carToUpdate.name;
-//     carToUpdate.catagory = catagory || carToUpdate.catagory;
+//     carToUpdate.category = category || carToUpdate.category;
 //     carToUpdate.fuel = fuel || carToUpdate.fuel;
 //     carToUpdate.handle = handle || carToUpdate.handle;
 //     carToUpdate.capasity = capasity || carToUpdate.capasity;
@@ -330,18 +330,18 @@
 
 // // Sample cars data to simulate database
 //  const posts = [
-//    { id: 1, name: 'Keemigsegg', catagory: 'Sport', image: '/images/car.png', fuel: '90', handle: 'Manual', capasity: '2', price: 99, secondprice: '100', carvalue: "Popular Car" },
-//    { id: 2, name: 'Nissan GT-R', catagory: 'Sport', image: '/images/car2.png', fuel: '80', handle: 'Automatic', capasity: '4', price: 80, secondprice: '100', carvalue: "Popular Car" },
-//      { id: 3, name: 'Rolls - Royce' , catagory : 'Sedan',image : '/images/car3.png' , fuel : '70',handle : 'Manual' , capasity : '4' ,price: 96 , secondprice : '' ,carvalue : "popular Car" },
-//     { id: 4, name: 'Nissan GT - R' , catagory : 'sport',image : '/images/car4.png' , fuel : '80',handle : 'Manual' , capasity : '2' ,price: 80 , secondprice : '100' ,carvalue : "popular Car" },
-//     { id: 5, name: 'All New Rush' , catagory : 'SUV',image : '/images/car5.png' , fuel : '70',handle : 'Manual' , capasity : '6' ,price: 72 , secondprice : '100' ,carvalue : "Recomendation Car" },
-//     { id: 6, name: 'CR-V' , catagory : 'SUV',image : '/images/car6.png' , fuel : '80',handle : 'Manual' , capasity : '6' ,price: 80 , secondprice : '' ,carvalue : "Recomendation Car" },
-//     { id: 7, name: 'All New Terios' , catagory : 'SUV',image : '/images/car7.png' , fuel : '90',handle : 'Manual' , capasity : '6' ,price: 74 , secondprice : '' ,carvalue : "Recomendation Car" },
-//     { id: 8, name: 'CR-V' , catagory : 'SUV',image : '/images/car8.png' , fuel : '80',handle : 'Manual' , capasity : '6' ,price: 80 , secondprice : '' ,carvalue : "Recomendation Car" },
-//     { id: 9, name: 'MG ZX Exclusice' , catagory : 'Hatchback',image : '/images/car9.png' , fuel : '70',handle : 'Manual' , capasity : '4' ,price: 76 , secondprice : '80' ,carvalue : "Recomendation Car" },
-//     {id: 10, name: 'New MG ZS' , catagory : 'SUV',image : '/images/car10.png' , fuel : '80',handle : 'Manual' , capasity : '6' ,price: 80 , secondprice : '' ,carvalue : "Recomendation Car" },
-//     { id: 11, name: 'MG ZX Excite' , catagory : 'Hatchback',image : '/images/car11.png' , fuel : '90',handle : 'Manual' , capasity : '4' ,price: 74 , secondprice : '' ,carvalue : "Recomendation Car" },
-//     {id: 12, name: 'New MG ZS' , catagory : 'SUV',image : '/images/car12.png' , fuel : '80',handle : 'Manual' , capasity : '6' ,price: 80 , secondprice : '' ,carvalue : "Recomendation Car" },
+//    { id: 1, name: 'Keemigsegg', category: 'Sport', image: '/images/car.png', fuel: '90', handle: 'Manual', capasity: '2', price: 99, secondprice: '100', carvalue: "Popular Car" },
+//    { id: 2, name: 'Nissan GT-R', category: 'Sport', image: '/images/car2.png', fuel: '80', handle: 'Automatic', capasity: '4', price: 80, secondprice: '100', carvalue: "Popular Car" },
+//      { id: 3, name: 'Rolls - Royce' , category : 'Sedan',image : '/images/car3.png' , fuel : '70',handle : 'Manual' , capasity : '4' ,price: 96 , secondprice : '' ,carvalue : "popular Car" },
+//     { id: 4, name: 'Nissan GT - R' , category : 'sport',image : '/images/car4.png' , fuel : '80',handle : 'Manual' , capasity : '2' ,price: 80 , secondprice : '100' ,carvalue : "popular Car" },
+//     { id: 5, name: 'All New Rush' , category : 'SUV',image : '/images/car5.png' , fuel : '70',handle : 'Manual' , capasity : '6' ,price: 72 , secondprice : '100' ,carvalue : "Recomendation Car" },
+//     { id: 6, name: 'CR-V' , category : 'SUV',image : '/images/car6.png' , fuel : '80',handle : 'Manual' , capasity : '6' ,price: 80 , secondprice : '' ,carvalue : "Recomendation Car" },
+//     { id: 7, name: 'All New Terios' , category : 'SUV',image : '/images/car7.png' , fuel : '90',handle : 'Manual' , capasity : '6' ,price: 74 , secondprice : '' ,carvalue : "Recomendation Car" },
+//     { id: 8, name: 'CR-V' , category : 'SUV',image : '/images/car8.png' , fuel : '80',handle : 'Manual' , capasity : '6' ,price: 80 , secondprice : '' ,carvalue : "Recomendation Car" },
+//     { id: 9, name: 'MG ZX Exclusice' , category : 'Hatchback',image : '/images/car9.png' , fuel : '70',handle : 'Manual' , capasity : '4' ,price: 76 , secondprice : '80' ,carvalue : "Recomendation Car" },
+//     {id: 10, name: 'New MG ZS' , category : 'SUV',image : '/images/car10.png' , fuel : '80',handle : 'Manual' , capasity : '6' ,price: 80 , secondprice : '' ,carvalue : "Recomendation Car" },
+//     { id: 11, name: 'MG ZX Excite' , category : 'Hatchback',image : '/images/car11.png' , fuel : '90',handle : 'Manual' , capasity : '4' ,price: 74 , secondprice : '' ,carvalue : "Recomendation Car" },
+//     {id: 12, name: 'New MG ZS' , category : 'SUV',image : '/images/car12.png' , fuel : '80',handle : 'Manual' , capasity : '6' ,price: 80 , secondprice : '' ,carvalue : "Recomendation Car" },
 //  ];
 
 // export const runtime = "nodejs"; // For server-side operations (use `nodejs` instead of `edge`)
@@ -352,7 +352,7 @@
 //     const data = await req.formData();  // Extract form data
 
 //     const name = data.get('name') as string;
-//     const catagory = data.get('catagory') as string;
+//     const category = data.get('category') as string;
 //     const fuel = data.get('fuel') as string;
 //     const handle = data.get('handle') as string;
 //     const capasity = data.get('capasity') as string;
@@ -378,7 +378,7 @@
 //     const newCar = {
 //       id: posts.length + 1,
 //       name: name || '',
-//       catagory: catagory || '',
+//       category: category || '',
 //       fuel: fuel || '',
 //       handle: handle || '',
 //       capasity: capasity || '',
@@ -408,7 +408,7 @@
     
 //     const id = parseInt(data.get('id') as string);
 //     const name = data.get('name') as string;
-//     const catagory = data.get('catagory') as string;
+//     const category = data.get('category') as string;
 //     const fuel = data.get('fuel') as string;
 //     const handle = data.get('handle') as string;
 //     const capasity = data.get('capasity') as string;
@@ -443,7 +443,7 @@
 
 //     // Update car data
 //     carToUpdate.name = name || carToUpdate.name;
-//     carToUpdate.catagory = catagory || carToUpdate.catagory;
+//     carToUpdate.category = category || carToUpdate.category;
 //     carToUpdate.fuel = fuel || carToUpdate.fuel;
 //     carToUpdate.handle = handle || carToUpdate.handle;
 //     carToUpdate.capasity = capasity || carToUpdate.capasity;
@@ -489,18 +489,18 @@ import { existsSync, mkdirSync } from "fs";
 
 // Sample cars data to simulate database
   const posts = [
-    { id: 1, name: 'Keemigsegg', catagory: 'Sport', image: '/images/car.png', fuel: '90', handle: 'Manual', capasity: '2', price: 99, secondprice: '100', carvalue: "Popular Car" },
-    { id: 2, name: 'Nissan GT-R', catagory: 'Sport', image: '/images/car2.png', fuel: '80', handle: 'Automatic', capasity: '4', price: 80, secondprice: '100', carvalue: "Popular Car" },
-      { id: 3, name: 'Rolls - Royce' , catagory : 'Sedan',image : '/images/car3.png' , fuel : '70',handle : 'Manual' , capasity : '4' ,price: 96 , secondprice : '' ,carvalue : "popular Car" },
-     { id: 4, name: 'Nissan GT - R' , catagory : 'sport',image : '/images/car4.png' , fuel : '80',handle : 'Manual' , capasity : '2' ,price: 80 , secondprice : '100' ,carvalue : "popular Car" },
-     { id: 5, name: 'All New Rush' , catagory : 'SUV',image : '/images/car5.png' , fuel : '70',handle : 'Manual' , capasity : '6' ,price: 72 , secondprice : '100' ,carvalue : "Recomendation Car" },
-     { id: 6, name: 'CR-V' , catagory : 'SUV',image : '/images/car6.png' , fuel : '80',handle : 'Manual' , capasity : '6' ,price: 80 , secondprice : '' ,carvalue : "Recomendation Car" },
-     { id: 7, name: 'All New Terios' , catagory : 'SUV',image : '/images/car7.png' , fuel : '90',handle : 'Manual' , capasity : '6' ,price: 74 , secondprice : '' ,carvalue : "Recomendation Car" },
-     { id: 8, name: 'CR-V' , catagory : 'SUV',image : '/images/car8.png' , fuel : '80',handle : 'Manual' , capasity : '6' ,price: 80 , secondprice : '' ,carvalue : "Recomendation Car" },
-     { id: 9, name: 'MG ZX Exclusice' , catagory : 'Hatchback',image : '/images/car9.png' , fuel : '70',handle : 'Manual' , capasity : '4' ,price: 76 , secondprice : '80' ,carvalue : "Recomendation Car" },
-     {id: 10, name: 'New MG ZS' , catagory : 'SUV',image : '/images/car10.png' , fuel : '80',handle : 'Manual' , capasity : '6' ,price: 80 , secondprice : '' ,carvalue : "Recomendation Car" },
-     { id: 11, name: 'MG ZX Excite' , catagory : 'Hatchback',image : '/images/car11.png' , fuel : '90',handle : 'Manual' , capasity : '4' ,price: 74 , secondprice : '' ,carvalue : "Recomendation Car" },
-     {id: 12, name: 'New MG ZS' , catagory : 'SUV',image : '/images/car12.png' , fuel : '80',handle : 'Manual' , capasity : '6' ,price: 80 , secondprice : '' ,carvalue : "Recomendation Car" },
+    { id: 1, name: 'Keemigsegg', category: 'Sport', image: '/images/car.png', fuel: '90', handle: 'Manual', capasity: '2', price: 99, secondprice: '100', carvalue: "Popular Car" },
+    { id: 2, name: 'Nissan GT-R', category: 'Sport', image: '/images/car2.png', fuel: '80', handle: 'Automatic', capasity: '4', price: 80, secondprice: '100', carvalue: "Popular Car" },
+      { id: 3, name: 'Rolls - Royce' , category : 'Sedan',image : '/images/car3.png' , fuel : '70',handle : 'Manual' , capasity : '4' ,price: 96 , secondprice : '' ,carvalue : "popular Car" },
+     { id: 4, name: 'Nissan GT - R' , category : 'sport',image : '/images/car4.png' , fuel : '80',handle : 'Manual' , capasity : '2' ,price: 80 , secondprice : '100' ,carvalue : "popular Car" },
+     { id: 5, name: 'All New Rush' , category : 'SUV',image : '/images/car5.png' , fuel : '70',handle : 'Manual' , capasity : '6' ,price: 72 , secondprice : '100' ,carvalue : "Recomendation Car" },
+     { id: 6, name: 'CR-V' , category : 'SUV',image : '/images/car6.png' , fuel : '80',handle : 'Manual' , capasity : '6' ,price: 80 , secondprice : '' ,carvalue : "Recomendation Car" },
+     { id: 7, name: 'All New Terios' , category : 'SUV',image : '/images/car7.png' , fuel : '90',handle : 'Manual' , capasity : '6' ,price: 74 , secondprice : '' ,carvalue : "Recomendation Car" },
+     { id: 8, name: 'CR-V' , category : 'SUV',image : '/images/car8.png' , fuel : '80',handle : 'Manual' , capasity : '6' ,price: 80 , secondprice : '' ,carvalue : "Recomendation Car" },
+     { id: 9, name: 'MG ZX Exclusice' , category : 'Hatchback',image : '/images/car9.png' , fuel : '70',handle : 'Manual' , capasity : '4' ,price: 76 , secondprice : '80' ,carvalue : "Recomendation Car" },
+     {id: 10, name: 'New MG ZS' , category : 'SUV',image : '/images/car10.png' , fuel : '80',handle : 'Manual' , capasity : '6' ,price: 80 , secondprice : '' ,carvalue : "Recomendation Car" },
+     { id: 11, name: 'MG ZX Excite' , category : 'Hatchback',image : '/images/car11.png' , fuel : '90',handle : 'Manual' , capasity : '4' ,price: 74 , secondprice : '' ,carvalue : "Recomendation Car" },
+     {id: 12, name: 'New MG ZS' , category : 'SUV',image : '/images/car12.png' , fuel : '80',handle : 'Manual' , capasity : '6' ,price: 80 , secondprice : '' ,carvalue : "Recomendation Car" },
   ];
 
 // POST Request to add a new car
@@ -509,7 +509,7 @@ export async function POST(req: NextRequest) {
     const data = await req.formData();  // Extract form data
 
     const name = data.get('name') as string;
-    const catagory = data.get('catagory') as string;
+    const category = data.get('category') as string;
     const fuel = data.get('fuel') as string;
     const handle = data.get('handle') as string;
     const capasity = data.get('capasity') as string;
@@ -535,7 +535,7 @@ export async function POST(req: NextRequest) {
     const newCar = {
       id: posts.length + 1,
       name: name || '',
-      catagory: catagory || '',
+      category: category || '',
       fuel: fuel || '',
       handle: handle || '',
       capasity: capasity || '',
@@ -555,6 +555,8 @@ export async function POST(req: NextRequest) {
 
 // GET Request to fetch all cars
 export async function GET(req: NextRequest) {
+  console.log(req);
+  
   return new NextResponse(JSON.stringify(posts), { status: 200 });
 }
 
@@ -565,7 +567,7 @@ export async function PUT(req: NextRequest) {
     
     const id = parseInt(data.get('id') as string); // Parse the car ID
     const name = data.get('name') as string;
-    const catagory = data.get('catagory') as string;
+    const category = data.get('category') as string;
     const fuel = data.get('fuel') as string;
     const handle = data.get('handle') as string;
     const capasity = data.get('capasity') as string;
@@ -575,7 +577,7 @@ export async function PUT(req: NextRequest) {
     
     const imageFile = data.get('image') as File;
 
-    let carToUpdate = posts.find(car => car.id === id); // Find car by ID
+    const carToUpdate = posts.find(car => car.id === id); // Find car by ID
 
     if (!carToUpdate) {
       return new NextResponse('Car not found', { status: 404 });
@@ -600,7 +602,7 @@ export async function PUT(req: NextRequest) {
 
     // Update car data
     carToUpdate.name = name || carToUpdate.name;
-    carToUpdate.catagory = catagory || carToUpdate.catagory;
+    carToUpdate.category = category || carToUpdate.category;
     carToUpdate.fuel = fuel || carToUpdate.fuel;
     carToUpdate.handle = handle || carToUpdate.handle;
     carToUpdate.capasity = capasity || carToUpdate.capasity;
