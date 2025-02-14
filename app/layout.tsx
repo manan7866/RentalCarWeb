@@ -75,6 +75,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <p></p>
         
       )}
+      
       <ClerkProvider>
       <CartProvider>
       <FilterProvider>
@@ -87,7 +88,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       
       
       
-     </ClerkProvider> 
+     </ClerkProvider>
+      
       </body>
     </html>
   );
